@@ -1,7 +1,5 @@
 'use strict';
-/**********
-	Registration Controller
-***********/
+
 angular.module('swapwaveApp')
     .controller('RegisterController', function ($scope, $translate, $timeout, Auth) {
         $scope.success = null;

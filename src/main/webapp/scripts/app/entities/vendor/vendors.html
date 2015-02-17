@@ -1,0 +1,192 @@
+<div>
+
+    <h2 translate="swapwaveApp.vendor.home.title">Vendor</h2>
+
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#saveVendorModal" ng-click="clear()">
+        <span class="glyphicon glyphicon-flash"></span> <span translate="swapwaveApp.vendor.home.createLabel">Create a new Vendor</span>
+    </button>
+    <div class="modal fade" id="saveVendorModal" tabindex="-1" role="dialog" aria-labelledby="myVendorLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="form" role="form" novalidate
+                      class="ng-scope ng-invalid ng-invalid-required ng-dirty ng-valid-minlength"
+                      ng-submit="create()">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" id="myVendorLabel" translate="swapwaveApp.vendor.home.createOrEditLabel">Create or edit a Vendor</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>ID</label>
+                            <input type="text" class="form-control" name="id"
+                                   ng-model="vendor.id" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="swapwaveApp.vendor.name">Name</label>
+                            <input type="text" class="form-control"
+                                   ng-model="vendor.name">
+                        </div>
+                        <div class="form-group">
+                            <label translate="swapwaveApp.vendor.dba">Dba</label>
+                            <input type="text" class="form-control"
+                                   ng-model="vendor.dba">
+                        </div>
+                        <div class="form-group">
+                            <label translate="swapwaveApp.vendor.federalId">FederalId</label>
+                            <input type="number" class="form-control"
+                                   ng-model="vendor.federalId">
+                        </div>
+                        <div class="form-group">
+                            <label translate="swapwaveApp.vendor.yearEstablished">YearEstablished</label>
+                            <input type="datetime-local" class="form-control"
+                                   ng-model="vendor.yearEstablished" ng-model-options="{timezone: 'UTC'}">
+                        </div>
+                        <div class="form-group">
+                            <label translate="swapwaveApp.vendor.ownershipType">OwnershipType</label>
+                            <input type="text" class="form-control"
+                                   ng-model="vendor.ownershipType">
+                        </div>
+                        <div class="form-group">
+                            <label translate="swapwaveApp.vendor.ownershipStates">OwnershipStates</label>
+                            <input type="text" class="form-control"
+                                   ng-model="vendor.ownershipStates">
+                        </div>
+                        <div class="form-group">
+                            <label translate="swapwaveApp.vendor.businessType">BusinessType</label>
+                            <input type="text" class="form-control"
+                                   ng-model="vendor.businessType">
+                        </div>
+                        <div class="form-group">
+                            <label translate="swapwaveApp.vendor.location">Location</label>
+                            <input type="text" class="form-control"
+                                   ng-model="vendor.location">
+                        </div>
+                        <div class="form-group">
+                            <label translate="swapwaveApp.vendor.numberofLocations">NumberofLocations</label>
+                            <input type="number" class="form-control"
+                                   ng-model="vendor.numberofLocations">
+                        </div>
+                        <div class="form-group">
+                            <label translate="swapwaveApp.vendor.yearsInPresentLoc">YearsInPresentLoc</label>
+                            <input type="number" class="form-control"
+                                   ng-model="vendor.yearsInPresentLoc">
+                        </div>
+                        <div class="form-group">
+                            <label translate="swapwaveApp.vendor.jbtId">JbtId</label>
+                            <input type="number" class="form-control"
+                                   ng-model="vendor.jbtId">
+                        </div>
+                        <div class="form-group">
+                            <label translate="swapwaveApp.vendor.jbtRating">JbtRating</label>
+                            <input type="number" class="form-control"
+                                   ng-model="vendor.jbtRating">
+                        </div>
+                        <div class="form-group">
+                            <label translate="swapwaveApp.vendor.bbbrating">Bbbrating</label>
+                            <input type="number" class="form-control"
+                                   ng-model="vendor.bbbrating">
+                        </div>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteVendorConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="form" ng-submit="confirmDelete(vendor.id)">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p translate="swapwaveApp.vendor.delete.question" translate-values="{id: '{{vendor.id}}'}">Are you sure you want to delete Vendor {{vendor.id}}?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="form.$invalid" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th translate="swapwaveApp.vendor.name">Name</th>
+                    <th translate="swapwaveApp.vendor.dba">Dba</th>
+                    <th translate="swapwaveApp.vendor.federalId">FederalId</th>
+                    <th translate="swapwaveApp.vendor.yearEstablished">YearEstablished</th>
+                    <th translate="swapwaveApp.vendor.ownershipType">OwnershipType</th>
+                    <th translate="swapwaveApp.vendor.ownershipStates">OwnershipStates</th>
+                    <th translate="swapwaveApp.vendor.businessType">BusinessType</th>
+                    <th translate="swapwaveApp.vendor.location">Location</th>
+                    <th translate="swapwaveApp.vendor.numberofLocations">NumberofLocations</th>
+                    <th translate="swapwaveApp.vendor.yearsInPresentLoc">YearsInPresentLoc</th>
+                    <th translate="swapwaveApp.vendor.jbtId">JbtId</th>
+                    <th translate="swapwaveApp.vendor.jbtRating">JbtRating</th>
+                    <th translate="swapwaveApp.vendor.bbbrating">Bbbrating</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="vendor in vendors">
+                    <td><a ui-sref="vendorDetail({id:vendor.id})">{{vendor.id}}</a></td>
+                    <td>{{vendor.name}}</td>
+                    <td>{{vendor.dba}}</td>
+                    <td>{{vendor.federalId}}</td>
+                    <td>{{vendor.yearEstablished}}</td>
+                    <td>{{vendor.ownershipType}}</td>
+                    <td>{{vendor.ownershipStates}}</td>
+                    <td>{{vendor.businessType}}</td>
+                    <td>{{vendor.location}}</td>
+                    <td>{{vendor.numberofLocations}}</td>
+                    <td>{{vendor.yearsInPresentLoc}}</td>
+                    <td>{{vendor.jbtId}}</td>
+                    <td>{{vendor.jbtRating}}</td>
+                    <td>{{vendor.bbbrating}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="vendorDetail({id:vendor.id})"
+                                class="btn btn-info">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="update(vendor.id)"
+                                class="btn btn-primary">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(vendor.id)"
+                                class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

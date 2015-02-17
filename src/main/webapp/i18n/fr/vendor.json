@@ -1,0 +1,31 @@
+{
+    "swapwaveApp": {
+        "vendor" : {
+            "home": {
+                "title": "Vendors",
+                "createLabel": "Créer un nouveau Vendor",
+                "createOrEditLabel": "Créer ou éditer un Vendor"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Vendor {{ id }} ?"
+            },
+            "detail": {
+                "title": "Vendor"
+            },
+            "name": "Name",
+            "dba": "Dba",
+            "federalId": "FederalId",
+            "yearEstablished": "YearEstablished",
+            "ownershipType": "OwnershipType",
+            "ownershipStates": "OwnershipStates",
+            "businessType": "BusinessType",
+            "location": "Location",
+            "numberofLocations": "NumberofLocations",
+            "yearsInPresentLoc": "YearsInPresentLoc",
+            "jbtId": "JbtId",
+            "jbtRating": "JbtRating",
+            "bbbrating": "Bbbrating"
+        }
+    }
+}
+

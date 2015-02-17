@@ -6,7 +6,6 @@ import com.ootey.swapwave.domain.PersistentToken;
 import com.ootey.swapwave.domain.User;
 import com.ootey.swapwave.repository.PersistentTokenRepository;
 import com.ootey.swapwave.repository.UserRepository;
-import com.ootey.swapwave.repository.VendorRepository;
 import com.ootey.swapwave.security.SecurityUtils;
 import com.ootey.swapwave.service.MailService;
 import com.ootey.swapwave.service.UserService;

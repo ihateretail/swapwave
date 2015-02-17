@@ -24,7 +24,6 @@
                 The password and its confirmation do not match!
             </div>
 
-	    <!--Registration Form -->
             <form ng-show="!success" name="form" role="form" novalidate ng-submit="register()" show-validation>
 
                 <div class="form-group">

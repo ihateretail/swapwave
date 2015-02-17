@@ -1,0 +1,103 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Name",
+            "fieldNameUnderscored": "name"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "dba",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Dba",
+            "fieldNameUnderscored": "dba"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "federalId",
+            "fieldType": "Long",
+            "fieldNameCapitalized": "FederalId",
+            "fieldNameUnderscored": "federal_id"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "yearEstablished",
+            "fieldType": "DateTime",
+            "fieldNameCapitalized": "YearEstablished",
+            "fieldNameUnderscored": "year_established"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "ownershipType",
+            "fieldType": "String",
+            "fieldNameCapitalized": "OwnershipType",
+            "fieldNameUnderscored": "ownership_type"
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "ownershipStates",
+            "fieldType": "String",
+            "fieldNameCapitalized": "OwnershipStates",
+            "fieldNameUnderscored": "ownership_states"
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "businessType",
+            "fieldType": "String",
+            "fieldNameCapitalized": "BusinessType",
+            "fieldNameUnderscored": "business_type"
+        },
+        {
+            "fieldId": 8,
+            "fieldName": "location",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Location",
+            "fieldNameUnderscored": "location"
+        },
+        {
+            "fieldId": 9,
+            "fieldName": "numberofLocations",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "NumberofLocations",
+            "fieldNameUnderscored": "numberof_locations"
+        },
+        {
+            "fieldId": 10,
+            "fieldName": "yearsInPresentLoc",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "YearsInPresentLoc",
+            "fieldNameUnderscored": "years_in_present_loc"
+        },
+        {
+            "fieldId": 11,
+            "fieldName": "jbtId",
+            "fieldType": "Long",
+            "fieldNameCapitalized": "JbtId",
+            "fieldNameUnderscored": "jbt_id"
+        },
+        {
+            "fieldId": 12,
+            "fieldName": "jbtRating",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "JbtRating",
+            "fieldNameUnderscored": "jbt_rating"
+        },
+        {
+            "fieldId": 13,
+            "fieldName": "bbbrating",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "Bbbrating",
+            "fieldNameUnderscored": "bbbrating"
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": true,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": true,
+    "changelogDate": "20150216134529"
+}
